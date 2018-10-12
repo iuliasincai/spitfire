@@ -1,0 +1,10 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: dbpassword
+    ports:
+      - "5432:5432"

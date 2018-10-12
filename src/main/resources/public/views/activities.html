@@ -1,0 +1,19 @@
+<div class="container pad-top">
+  <a ui-sref="newShipwreck" class="btn-primary btn-lg nodecoration">Add New Activity</a>
+  <table class="table shipwrecktable">
+      <tr>
+          <td><h3>All Activities</h3></td>
+          <td></td>
+      </tr>
+      <tr ng-repeat="activity in activities">
+          <td>{{activity.name}}</td>
+          <td>{{activity.description}}</td>
+          <td>{{activity.duration}}</td>
+          <td>{{activity.trainer}}</td>
+          <td>
+              <a class="btn btn-primary" ui-sref="viewActivity({id:activity.id})">View</a>
+              <a class="btn btn-danger"  ng-click="deleteActivity(activity)">Delete</a>
+          </td>
+      </tr>
+  </table>
+</div>
